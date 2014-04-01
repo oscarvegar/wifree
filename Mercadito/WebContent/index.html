@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="./script//jquery-1.11.0.min.js"></script>
+
+<script>
+$(document).ready(function() {
+	 $.getScript('./script/fball.js', function(){
+		 FB.Event.subscribe('edge.create', function(response) {
+			//top.location.reload();
+			  	alert(response);
+				alert('Gracias, disfruta tu Internet Gratis!');
+			    $("#sail").attr("src","./img/sail.jpg")
+			});   
+		    
+		    
+		    
+		  });
+	});
+</script>
+
+
+</head>
+<body style="text-align: center;">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=1417482881843966";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<img src="./img/mb.jpg" style="width: 50%;height: 25%">
+<br/>
+ <div class="fb-like" data-href="https://www.facebook.com/pages/Mercadito-de-Remate/1493201134237556" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<img id="sail" style="display: none;"></img>
+ </body>
+
+</html>
